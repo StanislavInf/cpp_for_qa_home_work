@@ -1,3 +1,14 @@
+#name: basic
+#on: [push]
+#jobs:
+#  build:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - uses: actions/checkout@v4
+#      - run: sudo apt-get update && sudo apt-get install -y cmake
+#      - run: mkdir build && cmake -B build -S . && cmake --build build
+#      - run: /cpp_for_qa_home_work 2 2
+
 name: basic
 on: [push]
 jobs:
@@ -6,5 +17,5 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: sudo apt-get update && sudo apt-get install -y cmake
-      - run: mkdir build && cmake -B build -S . && cmake --build build
-      - run: /cpp_for_qa_home_work 2 2
+      - run: mkdir build && cmake -B build -S . && cmake -- build build
+      - run: ./build/main 4 2
