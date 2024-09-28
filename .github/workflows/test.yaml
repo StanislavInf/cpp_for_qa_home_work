@@ -5,5 +5,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: g++ main.cpp square.h square.cpp -o main
+      - run: g++ main.cpp square.cpp -o main
       - run: ./main 2 2
