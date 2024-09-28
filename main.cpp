@@ -10,7 +10,7 @@ int main () {
 //    }
 //    int a = std::atoi(argv[1]);
 //    int b = std::atoi(argv[2]);
-//    std::cout << square(a, b) << '\n';
+    //    std::cout << square(a, b) << '\n';
     int a;
     int b;
     std::cin >> a >> b;
