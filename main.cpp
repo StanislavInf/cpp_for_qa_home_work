@@ -2,7 +2,7 @@
 #include "square.h"
 
 int main() {
-    std::cout << "Hello Word!";
+    std::cout << "Hello World!";
 //    int a;
 //    int b;
 //    std::cin >> a >> b;
