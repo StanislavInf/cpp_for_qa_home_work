@@ -42,3 +42,15 @@ jobs:
         with:
           name: binaries
       - run: chmod +x cpp_for_qa_home_work && ./cpp_for_qa_home_work 100.5 100.2 102.0 98.8 97.7 100.3 101.1 102.4 103.5 104.0
+
+  doxygen:
+    needs: [build, run]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update && sudo apt-get install -y doxygen graphviz
+      - run: doxygen Doxyfile
+      - uses: actions/upload-artifact@v4
+        with:
+          name: documentation
+          path: docs/html

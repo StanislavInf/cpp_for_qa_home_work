@@ -1,0 +1,7 @@
+PROJECT_NAME           = "cpp_for_qa_home_work"
+PROJECT_BRIEF          = "Project for quantitative analysis and algorithmic trading"
+OUTPUT_DIRECTORY       = "${CMAKE_CURRENT_BINARY_DIR}/docs"
+GENERATE_HTML          = YES
+GENERATE_LATEX         = NO
+EXTRACT_ALL            = YES
+INPUT                  = ${CMAKE_CURRENT_SOURCE_DIR}/include ${CMAKE_CURRENT_SOURCE_DIR}/src

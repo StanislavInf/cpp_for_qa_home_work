@@ -10,47 +10,33 @@ The architecture includes two main modules:
 
 ## Architecture
 ```
-|---
-|----- DataFeeder
+|--- cpp_for_qa_home_work
+|----- include
 |         |
-|         |--- MarketDataReceiver
-|         |        |
-|         |        |--- FASTDecoder
-|         |        |--- MarketDataValidator
-|         |
-|         |--- ExternalDataConnector
-|                 |--- FIXMessageHandler
-|                 |--- ConnectionManager
+|         |--- signal_processing
+|                 |--- strategy_engine.hpp
 |
-|----- SignalProcessing
+|----- src
 |         |
-|         |--- StrategyEngine
-|                 |--- Strategy1
-|                 |--- Strategy2
+|         |--- signal_processing
+|                 |--- strategy_engine.cpp
+|
+|----- tests
 |         |
-|         |--- SignalAnalyzer
-|         |--- ExecutionTrigger
-|                 |--- OrderManager
-|---
+|         |--- signal_processing
+|                 |--- strategy_engine_test.cpp
+|                 |
+|                 |--- test_data
+|                         |--- test_tick.csv
+|
+|----- benchmarks
+|         |
+|         |--- signal_processing
+|                 |--- strategy_engine_benchmark.cpp
+|
+|----- CMakeLists.txt
+
+|----- README.md
+
 ```
-```//TODO```
-
-### Module Descriptions
-
-### 1. **DataFeeder**
-This module is responsible for receiving raw market data from external trading systems and processing it into usable market information.
-```//TODO```
-
-### 2. **SignalProcessing**
-This module implements the core trading logic, processing market data and triggering actions based on defined strategies. ```//TODO```
-
----
-
-## Key Design Principles
-
-- **Modularity**: The system is designed with distinct, loosely-coupled modules. Each component has a well-defined responsibility, making the system flexible and easy to extend.
-  
-- **Interfaces**: Components interact via well-defined interfaces, allowing for easy modification or replacement of individual parts without affecting the entire system.
-
-```//TODO```
----
+### 
