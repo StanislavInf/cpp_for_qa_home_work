@@ -11,7 +11,7 @@ jobs:
         with:
           name: binaries
           path: |
-            build/main
+            build/cpp_for_qa_home_work
             build/tests
 
 
@@ -25,10 +25,10 @@ jobs:
       - run: chmod +x tests && ./tests
 
   run:
-    needs: [tests]
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/download-artifact@v4
         with:
           name: binaries
-      - run: chmod +x main && ./main 2 7
+      - run: chmod +x main && ./cpp_for_qa_home_work 2 7
