@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cstdlib>
-#include "square.h"
+#include "include/square.h"
 
 int main (int argc, char *argv[]) {
     std::cout << "Hello World!" << '\n';
