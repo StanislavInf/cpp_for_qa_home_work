@@ -1,0 +1,7 @@
+PROJECT_NAME           = "cpp_for_qa_home_work"
+PROJECT_BRIEF          = "Project for quantitative analysis and algorithmic trading"
+OUTPUT_DIRECTORY       = "${OUTPUT_DIRECTORY}"
+GENERATE_HTML          = YES
+GENERATE_LATEX         = YES
+EXTRACT_ALL            = YES
+INPUT                  = include src

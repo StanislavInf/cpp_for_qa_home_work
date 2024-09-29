@@ -1,15 +1,24 @@
 #include <iostream>
 #include <cstdlib>
-#include "include/square.h"
+#include "include/signal_processing/strategy_engine.hpp"
 
-int main (int argc, char *argv[]) {
-    std::cout << "Hello World!" << '\n';
-    if (argc != 3) {
-        std::cerr << "Provide exactly 2 arguments\n";
+int main(int argc, char *argv[]) {
+    std::cout << "Начало работы!" << '\n';
+    if (argc != 11) {
+        std::cerr << "Данные должны быть представлены только за первые 10 секунд\n";
         return 1;
     }
-    int a = std::atoi(argv[1]);
-    int b = std::atoi(argv[2]);
-    std::cout << square(a, b) << '\n';
+
+    size_t time = 8;
+    std::vector<double> prices;
+    prices.reserve(argc);
+    for (int i = 0; i < argc; ++i) {
+        double tick = std::atoi(argv[i]);
+        prices.push_back(tick);
+    }
+
+    double avg = StrategyEngine::movingAverage(prices, time);
+    std::cout << "Скользящее среднее для введённых значений" << '\n'
+              << avg;
     return 0;
 }
