@@ -53,7 +53,7 @@ jobs:
         with:
           name: binaries
       - run: ls -la
-      - run: chmod +x Doxyfile && ./Doxyfile
+      - run: doxygen ./Doxyfile
       - uses: actions/upload-artifact@v4
         with:
           name: documentation
