@@ -4,6 +4,6 @@
 class StrategyEngine {
 public:
     // Простая реализация скользящего среднего
-    static double movingAverage(const std::vector<double>& prices, size_t period);
+    static double movingAverage(const std::vector<double>& prices, int period);
 
 };

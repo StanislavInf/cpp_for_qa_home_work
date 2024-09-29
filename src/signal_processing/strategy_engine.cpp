@@ -3,7 +3,7 @@
 #include <vector>
 #include <stdexcept>
 
-double StrategyEngine::movingAverage(const std::vector<double>& prices, size_t period) {
+double StrategyEngine::movingAverage(const std::vector<double>& prices, int period) {
     if (prices.size() < period || period == 0) {
         throw std::invalid_argument("Неверный период или недостаточно данных");
     }
