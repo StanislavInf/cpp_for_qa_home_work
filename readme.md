@@ -1,6 +1,6 @@
-# FAST Signal Processing System
+# Домашнее задание 1
 
-## Overview
+## Обзор
 
 This project implements a modular system for receiving, decoding, and processing market data using the FAST (FIX Adapted for Streaming) protocol. The system is designed with scalability and flexibility in mind, enabling easy extension and modification of components without impacting the entire system.
 

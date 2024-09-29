@@ -19,7 +19,7 @@ message(STATUS "GTest binary dir: ${googletest_BINARY_DIR}")
 
 
 enable_testing()
-add_executable(tests test_square.cpp src/square.cpp)
+add_executable(tests tests/test_square.cpp src/square.cpp)
 target_link_libraries(tests gtest_main)
 
 include(GoogleTest)

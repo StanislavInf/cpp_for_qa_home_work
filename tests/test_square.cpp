@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "include/square.h"
+#include "../include/square.h"
 
 TEST(Add, Square) {
     EXPECT_EQ(square(2, 2), 4);
