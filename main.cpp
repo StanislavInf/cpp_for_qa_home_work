@@ -1,6 +1,5 @@
 #include <iostream>
 #include <cstdlib>
-#include "include/square.h"
 #include "include/signal_processing/strategy_engine.hpp"
 
 int main(int argc, char *argv[]) {
