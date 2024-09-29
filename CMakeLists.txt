@@ -3,7 +3,8 @@ project(cpp_for_qa_home_work)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(cpp_for_qa_home_work main.cpp src/square.cpp)
+add_executable(cpp_for_qa_home_work main.cpp src/square.cpp
+        src/signal_processing/strategy_engine.cpp)
 
 
 include(FetchContent)
@@ -19,7 +20,8 @@ message(STATUS "GTest binary dir: ${googletest_BINARY_DIR}")
 
 
 enable_testing()
-add_executable(tests tests/test_square.cpp src/square.cpp)
+add_executable(tests tests/test_square.cpp src/square.cpp
+        tests/signal_processing/test_strategy_engine.cpp src/signal_processing/strategy_engine.cpp)
 target_link_libraries(tests gtest_main)
 
 include(GoogleTest)
