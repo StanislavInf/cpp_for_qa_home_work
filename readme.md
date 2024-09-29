@@ -2,13 +2,9 @@
 
 ## Обзор
 
-This project implements a modular system for receiving, decoding, and processing market data using the FAST (FIX Adapted for Streaming) protocol. The system is designed with scalability and flexibility in mind, enabling easy extension and modification of components without impacting the entire system.
+Минимальное работоспособное решение первого домащнего задания с понятной архитектурой, юнит тестами, бенчмарками и автоматической генерацией документации.
 
-The architecture includes two main modules:
-1. **DataFeeder** - Responsible for receiving and decoding market data using the FAST protocol.
-2. **SignalProcessing** - Analyzes the decoded data to trigger trading strategies and execute orders based on the results.
-
-## Architecture
+## Архитектура
 ```
 |--- cpp_for_qa_home_work
 |----- include
@@ -26,8 +22,7 @@ The architecture includes two main modules:
 |         |--- signal_processing
 |                 |--- strategy_engine_test.cpp
 |                 |
-|                 |--- test_data
-|                         |--- test_tick.csv
+|                 |--- data
 |
 |----- benchmarks
 |         |

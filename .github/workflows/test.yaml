@@ -45,10 +45,9 @@ jobs:
       - run: chmod +x cpp_for_qa_home_work && ./cpp_for_qa_home_work 100.5 100.2 102.0 98.8 97.7 100.3 101.1 102.4 103.5 104.0
 
   doxygen:
-    needs: [build, run]
+    needs: build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
       - uses: actions/download-artifact@v4
         with:
           name: binaries
