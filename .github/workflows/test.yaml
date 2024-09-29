@@ -11,6 +11,7 @@ jobs:
         with:
           name: binaries
           path: |
+            build/Doxyfile
             build/cpp_for_qa_home_work
             build/tests
             build/benchmarks
@@ -49,7 +50,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: sudo apt-get update && sudo apt-get install -y doxygen graphviz
-      - run: cd build && doxygen Doxyfile
+      - run: doxygen Doxyfile
       - uses: actions/upload-artifact@v4
         with:
           name: documentation
