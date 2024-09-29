@@ -12,10 +12,10 @@ jobs:
         with:
           name: binaries
           path: |
-            docs/Doxyfile
             build/cpp_for_qa_home_work
             build/tests
             build/benchmarks
+            build/Doxyfile
 
 
   tests:
